@@ -81,7 +81,7 @@ class TOTP
         #get the start time of the window
         $timestamp = $this->truncateTimestamp(time()) + ($windowSteps * $this->interval * $this->windowSize);
 
-        #the amoount of steps per window
+        #the amount of steps per window
         for ($i = 0; $i < $this->windowSize; $i++) {
             yield $this->tokenAt($timestamp);
 
